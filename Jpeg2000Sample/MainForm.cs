@@ -14,11 +14,11 @@ namespace ThinkGeo.MapSuite.Samples
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            winformsMap1.MapUnit = GeographyUnit.DecimalDegree;
+            winformsMap1.MapUnit = GeographyUnit.Meter;
 
             LayerOverlay overlay = new LayerOverlay();
 
-            Jpeg2000RasterLayer jpeg2000RasterLayer = new Jpeg2000RasterLayer("../../App_Data/World.ecw");
+            Jpeg2000RasterLayer jpeg2000RasterLayer = new Jpeg2000RasterLayer("../../App_Data/World.jp2");
             overlay.Layers.Add(jpeg2000RasterLayer);
 
             winformsMap1.Overlays.Add(overlay);
